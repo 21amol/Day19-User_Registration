@@ -49,11 +49,26 @@ public class UserRegistration {
         }
     }
 
+    public void mobileNumber() {
+        System.out.println("Enter the mobile number with country code: ");
+        String mobNo = scanner.next();
+        Pattern pattern = Pattern.compile("^[0-9]{2}\s[0-9]{10}$");
+        Matcher match = pattern.matcher(mobNo);
+
+        if (match.matches()) {
+            System.out.println("Mobile number is valid");
+        } else {
+            System.out.println("Mobile Number is invalid, Try with another number.");
+        }
+    }
+
+
     public static void main(String[] args) {
 
         UserRegistration check = new UserRegistration();
         // check.firstName();
         //  check.lastName();
-        check.email();
+        // check.email();
+        check.mobileNumber();
     }
 }
