@@ -78,14 +78,42 @@ public class UserRegistration {
 
     public void ruleTwo() {
         System.out.println("Enter characters for second rule: ");
-        String one = scanner.next();
-        Pattern pattern = Pattern.compile("^[A-Z]{1,}[a-zA-Z]{7,}$");
-        Matcher match = pattern.matcher(one);
+        String two = scanner.next();
+        Pattern pattern = Pattern.compile("^[a-zA-Z]{1,}[a-zA-Z]{7,}$");
+        Matcher match = pattern.matcher(two);
 
         if (match.matches()) {
             System.out.println("Second Rule is valid");
         } else {
             System.out.println("Second Rule is invalid, Try another.");
+        }
+    }
+
+
+    public void ruleThird() {
+        System.out.println("Enter value for third rule: ");
+        String third = scanner.next();
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,}[a-zA-Z0-9]{7,}$");
+        Matcher match = pattern.matcher(third);
+
+        if (match.matches()) {
+            System.out.println("Third Rule is valid");
+        } else {
+            System.out.println("Third Rule is invalid, Try another.");
+        }
+    }
+
+
+    public void ruleFourth() {
+        System.out.println("Enter value for fourth rule: ");
+        String fourth = scanner.next();
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9@$!%*#?&]{1,}[a-zA-Z0-9@$!%*#?&]{7,}$");
+        Matcher match = pattern.matcher(fourth);
+
+        if (match.matches()) {
+            System.out.println("Fourth Rule is valid");
+        } else {
+            System.out.println("Fourth Rule is invalid, Try another.");
         }
     }
 
@@ -98,7 +126,9 @@ public class UserRegistration {
         // check.email();
         // check.mobileNumber();
         //check.ruleOne();
-        check.ruleTwo();
+        //check.ruleTwo();
+        //check.ruleThird();
+        check.ruleFourth();
 
 
     }
