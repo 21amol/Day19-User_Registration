@@ -62,6 +62,19 @@ public class UserRegistration {
         }
     }
 
+    public void ruleOne() {
+        System.out.println("Enter characters for first rule: ");
+        String one = scanner.next();
+        Pattern pattern = Pattern.compile("^[a-zA-Z]{8,}$");
+        Matcher match = pattern.matcher(one);
+
+        if (match.matches()) {
+            System.out.println("First Rule is valid");
+        } else {
+            System.out.println("First Rule is invalid, Try another.");
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -69,6 +82,7 @@ public class UserRegistration {
         // check.firstName();
         //  check.lastName();
         // check.email();
-        check.mobileNumber();
+        // check.mobileNumber();
+        check.ruleOne();
     }
 }
