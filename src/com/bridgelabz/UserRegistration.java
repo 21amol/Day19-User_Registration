@@ -116,20 +116,4 @@ public class UserRegistration {
             System.out.println("Fourth Rule is invalid, Try another.");
         }
     }
-
-
-    public static void main(String[] args) {
-
-        UserRegistration check = new UserRegistration();
-        // check.firstName();
-        //  check.lastName();
-        // check.email();
-        // check.mobileNumber();
-        //check.ruleOne();
-        //check.ruleTwo();
-        //check.ruleThird();
-        check.ruleFourth();
-
-
-    }
 }
