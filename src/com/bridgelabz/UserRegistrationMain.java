@@ -6,7 +6,7 @@ public class UserRegistrationMain {
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome to User Registration System Problem");
+        System.out.println("Welcome to User Registration System Problem\n");
 
         UserRegistration user = new UserRegistration();
         Scanner scanner = new Scanner(System.in);
@@ -26,8 +26,8 @@ public class UserRegistrationMain {
         String mail = " ";
         String mobNum = " ";
         String password = " ";
-        switch (choice) {
 
+        switch (choice) {
             case 1:
                 System.out.println("Enter the first name: ");
                 name = scanner.next();

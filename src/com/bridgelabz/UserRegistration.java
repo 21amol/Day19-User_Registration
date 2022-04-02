@@ -4,8 +4,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    // static Scanner scanner = new Scanner(System.in);
-
 
     public boolean firstName(String name) {
         Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{3,}$");
@@ -57,6 +55,7 @@ public class UserRegistration {
         }
         return true;
     }
+
 
     public boolean ruleOne(String password) {
         Pattern pattern = Pattern.compile("^[a-zA-Z]{8,}$");
