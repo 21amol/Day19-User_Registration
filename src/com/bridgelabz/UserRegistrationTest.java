@@ -22,7 +22,6 @@ class UserRegistrationTest {
         boolean result = user.lastName("Ghotale");
         assertEquals(true, result);
 
-
     }
 
     @Test
