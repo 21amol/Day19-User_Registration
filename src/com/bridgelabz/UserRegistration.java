@@ -1,16 +1,11 @@
 package com.bridgelabz;
 
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    static Scanner scanner = new Scanner(System.in);
 
-
-    public void firstName() {
-        System.out.println("Enter the first name: ");
-        String name = scanner.next();
+    public boolean firstName(String name) {
         Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{3,}$");
         Matcher match = pattern.matcher(name);
 
@@ -19,12 +14,11 @@ public class UserRegistration {
         } else {
             System.out.println("Name is invalid, Try with another name.");
         }
+        return true;
     }
 
-    public void lastName() {
 
-        System.out.println("Enter the last name: ");
-        String name = scanner.next();
+    public boolean lastName(String name) {
         Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{3,}$");
         Matcher match = pattern.matcher(name);
 
@@ -33,87 +27,84 @@ public class UserRegistration {
         } else {
             System.out.println("Name is invalid, Try with another name.");
         }
+        return true;
     }
 
-    public void email() {
 
-        System.out.println("Enter the email: ");
-        String mail = scanner.next();
+    public boolean email(String mail) {
         Pattern pattern = Pattern.compile("^[a-zA-Z]+[.][A-Za-z]+@[a-zA-Z]+[.]+[a-zA-Z]{2}+[.][A-Za-z]{2}+$");
         Matcher match = pattern.matcher(mail);
 
         if (match.matches()) {
             System.out.println("email is valid");
         } else {
-            System.out.println("email is invalid, Try with another name.");
+            System.out.println("email is invalid, Try with another id.");
         }
+        return true;
     }
 
-    public void mobileNumber() {
-        System.out.println("Enter the mobile number with country code: ");
-        String mobNo = scanner.next();
+
+    public boolean mobileNumber(String mobNum) {
         Pattern pattern = Pattern.compile("^[0-9]{2}\s[0-9]{10}$");
-        Matcher match = pattern.matcher(mobNo);
+        Matcher match = pattern.matcher(mobNum);
 
         if (match.matches()) {
             System.out.println("Mobile number is valid");
         } else {
             System.out.println("Mobile Number is invalid, Try with another number.");
         }
+        return true;
     }
 
-    public void ruleOne() {
-        System.out.println("Enter characters for first rule: ");
-        String one = scanner.next();
+
+    public boolean ruleOne(String password) {
         Pattern pattern = Pattern.compile("^[a-zA-Z]{8,}$");
-        Matcher match = pattern.matcher(one);
+        Matcher match = pattern.matcher(password);
 
         if (match.matches()) {
             System.out.println("First Rule is valid");
         } else {
             System.out.println("First Rule is invalid, Try another.");
         }
+        return true;
     }
 
 
-    public void ruleTwo() {
-        System.out.println("Enter characters for second rule: ");
-        String two = scanner.next();
+    public boolean ruleTwo(String password) {
         Pattern pattern = Pattern.compile("^[a-zA-Z]{1,}[a-zA-Z]{7,}$");
-        Matcher match = pattern.matcher(two);
+        Matcher match = pattern.matcher(password);
 
         if (match.matches()) {
             System.out.println("Second Rule is valid");
         } else {
             System.out.println("Second Rule is invalid, Try another.");
         }
+        return true;
     }
 
 
-    public void ruleThird() {
-        System.out.println("Enter value for third rule: ");
-        String third = scanner.next();
+    public boolean ruleThird(String password) {
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,}[a-zA-Z0-9]{7,}$");
-        Matcher match = pattern.matcher(third);
+        Matcher match = pattern.matcher(password);
 
         if (match.matches()) {
             System.out.println("Third Rule is valid");
         } else {
             System.out.println("Third Rule is invalid, Try another.");
         }
+        return true;
     }
 
 
-    public void ruleFourth() {
-        System.out.println("Enter value for fourth rule: ");
-        String fourth = scanner.next();
+    public boolean ruleFourth(String password) {
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9@$!%*#?&]{1,}[a-zA-Z0-9@$!%*#?&]{7,}$");
-        Matcher match = pattern.matcher(fourth);
+        Matcher match = pattern.matcher(password);
 
         if (match.matches()) {
             System.out.println("Fourth Rule is valid");
         } else {
             System.out.println("Fourth Rule is invalid, Try another.");
         }
+        return true;
     }
 }
