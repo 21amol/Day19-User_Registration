@@ -20,33 +20,53 @@ public class UserRegistrationMain {
         System.out.println("Enter 7 : to validate Password Rule 3 ");
         System.out.println("Enter 8 : to validate Password Rule 4 ");
 
-        System.out.println("Enter your coice:");
+        System.out.println("Enter your choice:");
         int choice = scanner.nextInt();
+        String name = " ";
+        String mail = " ";
+        String mobNum = " ";
+        String password = " ";
         switch (choice) {
 
             case 1:
-                user.firstName();
+                System.out.println("Enter the first name: ");
+                name = scanner.next();
+                user.firstName(name);
                 break;
             case 2:
-                user.lastName();
+                System.out.println("Enter the last name: ");
+                name = scanner.next();
+                user.lastName(name);
                 break;
             case 3:
-                user.email();
+                System.out.println("Enter the email: ");
+                mail = scanner.next();
+                user.email(mail);
                 break;
             case 4:
-                user.mobileNumber();
+                System.out.println("Enter the mobile number with country code: ");
+                mobNum = scanner.next();
+                user.mobileNumber(mobNum);
                 break;
             case 5:
-                user.ruleOne();
+                System.out.println("Enter characters for first rule: ");
+                mail = scanner.next();
+                user.ruleOne(password);
                 break;
             case 6:
-                user.ruleTwo();
+                System.out.println("Enter characters for second rule: ");
+                mail = scanner.next();
+                user.ruleTwo(password);
                 break;
             case 7:
-                user.ruleThird();
+                System.out.println("Enter value for third rule: ");
+                mail = scanner.next();
+                user.ruleThird(password);
                 break;
             case 8:
-                user.ruleFourth();
+                System.out.println("Enter value for fourth rule: ");
+                mail = scanner.next();
+                user.ruleFourth(password);
                 break;
             default:
                 System.out.println("Invalid! Select a valid number");
