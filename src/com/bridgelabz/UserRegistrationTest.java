@@ -28,7 +28,7 @@ class UserRegistrationTest {
     void givenEmail_WhenProper_ShouldReturnValid() {
 
         UserRegistration user = new UserRegistration();
-        boolean result = user.email("abc.xyz@bl.co.in");
+        boolean result = user.email("abc@gmail.com.aa.au");
         assertEquals(true, result);
 
 
