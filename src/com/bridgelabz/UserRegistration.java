@@ -19,7 +19,7 @@ public class UserRegistration {
 
 
         public boolean email (String mail) {
-            Pattern pattern = Pattern.compile("^[a-z0-9-+]*[.]{0,1}[0-9]@[a-z0-9]+([.][a-z.]+){1,2}$");
+            Pattern pattern = Pattern.compile("^[a-z0-9-+]*[.]{0,1}[0-9a-z]@[a-z0-9]+([.][a-z.]+){1,2}$");
             return pattern.matcher(mail).matches();
         }
 
